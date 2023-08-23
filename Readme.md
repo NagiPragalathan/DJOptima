@@ -1,6 +1,6 @@
-# DjangoKit ToolKit for Django
+# DjangoOptimus ToolKit for Django
 
-The **DjangoKit ToolKit for Django** is an all-in-one utility designed to simplify and enhance the deployment process of Django projects, particularly tailored for seamless integration with the Vercel hosting platform. This toolkit empowers developers with a range of powerful features, streamlining essential tasks and boosting productivity.
+The **DjangoOptimus ToolKit for Django** is an all-in-one utility designed to simplify and enhance the deployment process of Django projects, particularly tailored for seamless integration with the Vercel hosting platform. This toolkit empowers developers with a range of powerful features, streamlining essential tasks and boosting productivity.
 
 ## Features
 
@@ -405,7 +405,7 @@ print_help()
 
 ---
 
-# `DjangoKit` - Streamlined Deployment of Django Projects to Vercel
+# `DjangoOptimus` - Streamlined Deployment of Django Projects to Vercel
 
 The `vercelkit.py` module offers a toolkit for simplifying the deployment of Django projects to the Vercel platform. It includes functions for generating deployment files, configuring settings, and automating the deployment process.
 

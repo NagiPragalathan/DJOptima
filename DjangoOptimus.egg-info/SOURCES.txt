@@ -1,0 +1,15 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+setup.py
+DjangoOptimus/Base.py
+DjangoOptimus/Host.py
+DjangoOptimus/Template.py
+DjangoOptimus/VercelKit.py
+DjangoOptimus/templatetage.py
+DjangoOptimus.egg-info/PKG-INFO
+DjangoOptimus.egg-info/SOURCES.txt
+DjangoOptimus.egg-info/dependency_links.txt
+DjangoOptimus.egg-info/requires.txt
+DjangoOptimus.egg-info/top_level.txt

@@ -33,7 +33,7 @@ Functions:
 
 """
 
-from Host import base_edit_settings_file, edit_urls_file, get_app_name, t_size,find_views_folder
+from .Host import base_edit_settings_file, edit_urls_file, get_app_name, t_size,find_views_folder
 import os, re
 from Designer.BackGroundColor import *
 from Designer.ForeGroundColor import *

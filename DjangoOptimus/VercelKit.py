@@ -23,8 +23,8 @@ Functions:
 """
 
 import sys
-from Base import create_folders, create_templatetags
-from Host import generate_files, Change_the_files
+from .Base import create_folders, create_templatetags
+from .Host import generate_files, Change_the_files
 from Template import convert_to_django_html, djangotemp, t_size
 from Designer.BackGroundColor import *
 from Designer.ForeGroundColor import *
