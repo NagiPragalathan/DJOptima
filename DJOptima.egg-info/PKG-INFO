@@ -1,3 +1,20 @@
+Metadata-Version: 2.1
+Name: DJOptima
+Version: 0.0.1
+Summary: The DJOptima ToolKit for Django is an all-in-one utility designed to simplify and enhance the deployment process of Django projects, particularly tailored for seamless integration with the Vercel hosting platform. This toolkit empowers developers with a range of powerful features, streamlining essential tasks and boosting productivity.
+Home-page: https://nagipragalathan.github.io/Personal_website/home.html
+Author: NagiPragalathan
+Author-email: nagipragalathan@gmail.com
+License: MIT
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENCE.txt
+
 # DJOptima ToolKit for Django
 
 The **DJOptima ToolKit for Django** is an all-in-one utility designed to simplify and enhance the deployment process of Django projects, particularly tailored for seamless integration with the Vercel hosting platform. This toolkit empowers developers with a range of powerful features, streamlining essential tasks and boosting productivity.
@@ -497,3 +514,12 @@ djoptima --help
 ```
 
 ---
+
+
+Change Log
+==========
+
+0.0.0.1 (24/08/2022)
+--------------------
+
+-First Release

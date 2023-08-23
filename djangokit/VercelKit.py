@@ -25,7 +25,7 @@ Functions:
 import sys
 from .Base import create_folders, create_templatetags
 from .Host import generate_files, Change_the_files
-from Template import convert_to_django_html, djangotemp, t_size
+from .Template import convert_to_django_html, djangotemp, t_size
 from Designer.BackGroundColor import *
 from Designer.ForeGroundColor import *
 
@@ -65,23 +65,27 @@ def print_error(message):
     """Prints an error message in red."""
     print(red(f"Error: {message}"))
 
-# Check for command-line arguments
-if len(sys.argv) == 1 or "-h" in sys.argv or "--help" in sys.argv:
-    print_help()
-elif "--base" in sys.argv:
-    create_folders()
-    create_templatetags()
-elif "--vercelhost" in sys.argv:
-    generate_files()
-    Change_the_files()
-elif "--inphtml" in sys.argv:
-    if len(sys.argv) >= 3:
-        convert_to_django_html(sys.argv[2], sys.argv[2])
+def main():
+    # Check for command-line arguments
+    if len(sys.argv) == 1 or "-h" in sys.argv or "--help" in sys.argv:
+        print_help()
+    elif "--base" in sys.argv:
+        create_folders()
+        create_templatetags()
+    elif "--vercelhost" in sys.argv:
+        generate_files()
+        Change_the_files()
+    elif "--inphtml" in sys.argv:
+        if len(sys.argv) >= 3:
+            convert_to_django_html(sys.argv[2], sys.argv[2])
+        else:
+            print_error("Please provide the input HTML file path.")
+    elif "--djhtml" in sys.argv:
+        djangotemp()
+    elif "--version" in sys.argv or "--V" in sys.argv or "--v" in sys.argv:
+        print_version()
     else:
-        print_error("Please provide the input HTML file path.")
-elif "--djhtml" in sys.argv:
-    djangotemp()
-elif "--version" in sys.argv or "--V" in sys.argv or "--v" in sys.argv:
-    print_version()
-else:
-    print_error("Unknown command. Use '--help' to see available options.")
+        print_error("Unknown command. Use '--help' to see available options.")
+
+if __name__ == '__main__':
+    main()

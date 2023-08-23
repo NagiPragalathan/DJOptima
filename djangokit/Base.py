@@ -37,7 +37,7 @@ from .Host import base_edit_settings_file, edit_urls_file, get_app_name, t_size,
 import os, re
 from Designer.BackGroundColor import *
 from Designer.ForeGroundColor import *
-from templatetage import Data
+from .templatetage import Data
 
 def create_templatetags():
     """
