@@ -1,10 +1,45 @@
-import re
-import os
+# Template.py - Advanced Terminal Styling for Django Templates
 
+"""
+The 'Template.py' module in your Django project enhances terminal-based styling and provides
+tools to convert HTML content into Django template format. It introduces advanced terminal
+size retrieval for more precise styling, and offers a function to seamlessly convert HTML
+files into Django template format with static tag replacements.
+
+Usage:
+    This module is designed to be imported and used within your Django project for terminal-
+    based styling enhancements and HTML-to-template conversion.
+
+Features:
+    - 't_size()': A function to retrieve advanced terminal dimensions for responsive styling.
+    - 'convert_to_django_html(input_file, output_file)': Convert HTML files to Django
+      template format by replacing 'href' and 'src' attributes with Django static tags.
+    - 'djangotemp()': Converts HTML files in the current directory to Django template format,
+      saving them in an 'output_html_files' directory.
+
+Functions:
+    - 't_size()': Retrieve advanced terminal dimensions for precise styling in templates.
+    - 'convert_to_django_html(input_file, output_file)': Convert HTML to Django template
+      format with static tag replacements.
+    - 'djangotemp()': Batch convert HTML files to Django template format in the current
+      directory.
+
+"""
+
+import re, os
 from Designer.BackGroundColor import *
 from Designer.ForeGroundColor import *
 
 def t_size():
+    """
+    Retrieve the current terminal size in columns (width) and lines (height).
+
+    This function utilizes the 'os.get_terminal_size()' method to obtain the dimensions
+    of the current terminal window. It returns a list containing the terminal width and height.
+
+    Returns:
+        list: A list containing the terminal width (columns) and height (lines).
+    """
     terminal_size = os.get_terminal_size()
     terminal_width = terminal_size.columns
     terminal_height = terminal_size.lines
@@ -12,6 +47,17 @@ def t_size():
 
 
 def convert_to_django_html(input_file, output_file):
+    """
+    Convert HTML file to Django template format with static tag replacements.
+
+    This function reads the content of an HTML file and converts the 'href' and 'src'
+    attributes to Django static tags, making it compatible with Django templates.
+
+    Args:
+        input_file (str): Path to the input HTML file.
+        output_file (str): Path to the output Django template file.
+
+    """
     with open(input_file, 'r') as f:
         html_content = f.read()
 
@@ -29,6 +75,14 @@ def convert_to_django_html(input_file, output_file):
         f.write(django_html_content)
 
 def djangotemp():
+    """
+    Convert HTML files in the current directory to Django template format.
+
+    This function searches for HTML files in the current directory and converts them to
+    Django template format by replacing 'href' and 'src' attributes with Django static tags.
+    The converted files are saved in a separate 'output_html_files' directory.
+
+    """
     input_directory = os.getcwd()
     output_directory = "output_html_files"
 
